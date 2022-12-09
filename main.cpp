@@ -4,11 +4,12 @@
 #include <stdlib.h>
 #include <random>
 #include <unistd.h>
+#include <atomic>
 
 sem_t reader_count_sem; // семафор для счетчика читателей
 sem_t resource_sem; // семафор для ресурса
 
-int reader_count = 0; // количество читателей
+std::atomic<int> reader_count(0); // количество читателей (std::atomic для корректного чтения в главном потоке)
 int size; // размер ресурса
 int resource[100]; // ресурс (массив целых чисел)
 
