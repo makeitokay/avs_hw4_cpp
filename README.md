@@ -24,3 +24,7 @@
 ### Компиляция
 
 `g++ -o cpp_program -pthread main.cpp`
+
+### Пример работы программы
+![example](https://user-images.githubusercontent.com/34311075/206870395-ba046e22-bf5e-4134-8da1-9b9dabaa6822.png)
+
